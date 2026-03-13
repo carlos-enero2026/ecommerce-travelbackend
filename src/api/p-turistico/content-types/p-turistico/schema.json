@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_turisticos",
+  "info": {
+    "singularName": "p-turistico",
+    "pluralName": "p-turisticos",
+    "displayName": "P_turistico",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "blocks"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "destino": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::d.d"
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": true
+    },
+    "slug": {
+      "type": "uid"
+    }
+  }
+}
